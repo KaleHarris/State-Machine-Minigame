@@ -110,6 +110,8 @@ public class SwordWhip : MonoBehaviour {
     public void setState (bool o) => open = o;
 
     void Update () {
+        this.gameObject.GetComponent<BoxCollider> ().isTrigger = open;
+        
         SwordWhipSegments[] swordSegments = this.gameObject.GetComponentsInChildren<SwordWhipSegments> ();
 
         // sets up animation phase
