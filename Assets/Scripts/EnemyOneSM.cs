@@ -27,7 +27,7 @@ public class EnemyOneSM : MonoBehaviour
 
     private void Awake()
     {
-        player = GameObject.Find("Player").transform;
+        player = GameObject.Find("VRRig").transform;
         agentOne = GetComponent<NavMeshAgent>();
     }
     
