@@ -114,27 +114,32 @@ public class SoftBody : MonoBehaviour {
         if (y < origin.Count - 1) {
             SpringJoint spring = connector.gameObject.AddComponent<SpringJoint> () as SpringJoint;
             spring.connectedBody = origin[y + 1].GetComponent<Link> ().sync.GetComponent<Rigidbody> ();
+            spring.spring = 100;
+            spring.anchor = new Vector3 (0, 0, 0);
         }
     }
 
     private void polish (GameObject connector, int x, int y, List<Transform> origin, Transform[] branch, List<Transform> stem) {
         SpringJoint spring = null;
-        for (var u = -1; u < 2; u++)
-            for (var v = -1; v < 2; v++) {
+        for (var u = -1; u < 2; u++) { // x
+            for (var v = -1; v < 2; v++) { // y
                 if (Mathf.Abs (u) == Mathf.Abs (v) && u != 0) continue;
                 spring = connector.gameObject.AddComponent<SpringJoint> () as SpringJoint;
+                spring.anchor = new Vector3 (0, 0, 0);
+                spring.connectedAnchor = new Vector3 (0, 0, 0);
+                spring.spring = 100;
                 if (u == v) spring.connectedBody = stem[y].GetComponent<Link> ().sync.GetComponent<Rigidbody> ();
                 else {
                     if (Mathf.Abs (u) > Mathf.Abs (v)) {
-                        if (x == origin.Count - 1 || x == 0) spring.connectedBody = origin[Mathf.Abs (x - origin.Count) - 1].GetComponent<Link> ().sync.GetComponent<Rigidbody> ();
-                        else spring.connectedBody = origin[x + u].GetComponent<Link> ().sync.GetComponent<Rigidbody> ();
-                    } else {
-                        if (y == branch.Length - 1 || y == 0) spring.connectedBody = origin[Mathf.Abs (y - branch.Length) - 1].GetComponent<Link> ().sync.GetComponent<Rigidbody> ();
-                        else spring.connectedBody = origin[y + v].GetComponent<Link> ().sync.GetComponent<Rigidbody> ();
-                    }
+                        if (x == origin.Count - 1 || x == 0) spring.connectedBody = origin[Mathf.Abs (x - origin.Count) - 1].GetComponentsInChildren<Transform> () [y].GetComponent<Link> ().sync.GetComponent<Rigidbody> ();
+                        else spring.connectedBody = origin[x + u].GetComponentsInChildren<Transform> () [y].GetComponent<Link> ().sync.GetComponent<Rigidbody> ();
+                    } else if (y != branch.Length - 1 && y != 0) spring.connectedBody = branch[y + v].GetComponent<Link> ().sync.GetComponent<Rigidbody> ();
                 }
-                spring.spring = 5;
+
+                // destroy all none connected springs
+                if (!spring.connectedBody) DestroyImmediate (spring);
             }
+        }
     }
     #endregion 
 }
