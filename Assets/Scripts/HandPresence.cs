@@ -18,10 +18,12 @@ public class HandPresence : MonoBehaviour
        
         InputDevices.GetDevicesWithCharacteristics(ControllerCharacteristics, devices);
 
+        /* 
         foreach (var item in devices)
         {
             Debug.Log(item.name + item.characteristics);
         }
+        */
 
         if(devices.Count > 0)
         {
@@ -58,17 +60,18 @@ public class HandPresence : MonoBehaviour
     {
         UpdateHandAnimation();
 
-        targetDevice.TryGetFeatureValue(CommonUsages.primaryButton, out bool primaryButtonValue);
-        if (primaryButtonValue)
+        targetDevice.TryGetFeatureValue(CommonUsages.gripButton, out bool gripButtonValue);
+        if (gripButtonValue)
         {
-            Debug.Log("primary button has been pressed");
+            //Debug.Log("primary button has been pressed");
         }
         targetDevice.TryGetFeatureValue(CommonUsages.trigger, out float triggerValue);
         if(triggerValue > 0.1f)
         {
-            Debug.Log("Trigger has been pressed" + triggerValue);
+           // Debug.Log("Trigger has been pressed" + triggerValue);
         }
 
         
+
     }
 }

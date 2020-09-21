@@ -49,7 +49,7 @@ public class EnemyOneSM : MonoBehaviour
     //Function for finding the player
     private void Scan()
     {
-        Debug.Log("I Am Scanning");
+        //Debug.Log("I Am Scanning");
 
         if (!SetScan) ScanningArea();
 
@@ -75,13 +75,13 @@ public class EnemyOneSM : MonoBehaviour
     //Function for Chasing the player
     private void Chase()
     {
-        Debug.Log("I Am Chasing");
+        //Debug.Log("I Am Chasing");
         agentOne.SetDestination(player.position);
     }
     //Function for attacking the player
     private void Attack()
     {
-        Debug.Log("I Am Attacking");
+        //Debug.Log("I Am Attacking");
         agentOne.SetDestination(player.position);
 
         transform.LookAt(player);
