@@ -7,75 +7,77 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: New Material
+  m_Name: Quartz
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
-  m_ShaderKeywords: _RECEIVE_SHADOWS_OFF _SPECULAR_SETUP
-  m_LightmapFlags: 4
+  m_ShaderKeywords: _ALPHAPREMULTIPLY_ON _EMISSION _METALLICSPECGLOSSMAP _NORMALMAP
+    _OCCLUSIONMAP
+  m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 1
-  m_CustomRenderQueue: 2050
+  m_CustomRenderQueue: 3100
   stringTagMap:
-    RenderType: Opaque
-  disabledShaderPasses: []
+    RenderType: Transparent
+  disabledShaderPasses:
+  - SHADOWCASTER
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
+        m_Texture: {fileID: 2800000, guid: e231e4c02c48ee14aafa55f7b1a843c1, type: 3}
+        m_Scale: {x: 5.82, y: -3.44}
+        m_Offset: {x: 0.98, y: -0.78}
     - _BumpMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 1c57985b1706ab1479cc79b226bd6b26, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 3e6389f7d0efad6499b532f60e04a9cd, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
+        m_Texture: {fileID: 2800000, guid: e231e4c02c48ee14aafa55f7b1a843c1, type: 3}
+        m_Scale: {x: 5.82, y: -3.44}
+        m_Offset: {x: 0.98, y: -0.78}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 2bb89817dd84f564f89a8371f51645e0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: db17334dfe5991a4bbe241ee9a728c38, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 2ec6e1532acb1254f9f3797b5d82db44, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _AlphaClip: 0
-    - _Blend: 0
+    - _Blend: 1
     - _BumpScale: 1
-    - _Cull: 1
-    - _Cutoff: 0
-    - _DstBlend: 0
+    - _Cull: 0
+    - _Cutoff: 0.363
+    - _DstBlend: 10
     - _EnvironmentReflections: 1
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _Metallic: 0
-    - _OcclusionStrength: 1
-    - _QueueOffset: 0
-    - _ReceiveShadows: 0
-    - _Smoothness: 1
-    - _SmoothnessTextureChannel: 0
+    - _Metallic: 1
+    - _OcclusionStrength: 0.777
+    - _QueueOffset: -50
+    - _ReceiveShadows: 1
+    - _Smoothness: 0.77
+    - _SmoothnessTextureChannel: 1
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _Surface: 0
-    - _WorkflowMode: 0
-    - _ZWrite: 1
+    - _Surface: 1
+    - _WorkflowMode: 1
+    - _ZWrite: 0
     m_Colors:
-    - _BaseColor: {r: 1, g: 0.7482478, b: 0, a: 0.5803922}
+    - _BaseColor: {r: 0.13643645, g: 0.35398313, b: 0.3962264, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissionColor: {r: 0.15970987, g: 0.33409244, b: 0.3490566, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
---- !u!114 &7362978645421973609
+--- !u!114 &1549604033585966114
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
