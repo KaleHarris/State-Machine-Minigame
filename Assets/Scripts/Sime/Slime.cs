@@ -1,18 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Obi;
 using UnityEngine;
 
-public class Slime : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+public class Slime : MonoBehaviour {
+    public ObiSoftbody softBody;
+    public SkinnedMeshRenderer meshRenderer;
+    public MeshCollider collider;
+
+    void LateUpdate () {
+        Mesh colliderMesh = new Mesh ();
+        meshRenderer.BakeMesh (colliderMesh);
+        collider.sharedMesh = null;
+        collider.sharedMesh = colliderMesh;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public void Death () => softBody.deformationResistance = 0;
 }

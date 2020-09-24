@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: -7544334824346051020}
   - component: {fileID: 7331460698665676275}
   - component: {fileID: -282391320623598188}
+  - component: {fileID: 3179244655857171072}
+  - component: {fileID: 8123143600967836982}
   m_Layer: 31
   m_Name: Sword Segment
   m_TagString: Untagged
@@ -62,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 5d5d5528d6378aa42878158229347829, type: 3}
+  - {fileID: 2100000, guid: 02a1820e20edb44449228cb1e95b32db, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -228,3 +230,33 @@ MonoBehaviour:
   highAngularXLimit: 0
   lowAngularXLimit: 0
   openState: 1
+--- !u!114 &3179244655857171072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8194232433988647009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 0}
+  phase: 0
+  thickness: 1
+  m_SourceCollider: {fileID: 7331460698665676275}
+  m_DistanceField: {fileID: 0}
+--- !u!114 &8123143600967836982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8194232433988647009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62359d80fdc0e4315ab6331b78ec5b90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kinematicForParticles: 0
