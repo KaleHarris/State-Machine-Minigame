@@ -4209,6 +4209,7 @@ GameObject:
   - component: {fileID: 1170782590717825097}
   - component: {fileID: 1170782590717825096}
   - component: {fileID: 1170782590717825143}
+  - component: {fileID: -4357676671377350722}
   m_Layer: 0
   m_Name: Slime
   m_TagString: Untagged
@@ -4352,3 +4353,30 @@ MonoBehaviour:
   - {fileID: 1170782590717825096}
   substepUnityPhysics: 0
   substeps: 1
+--- !u!114 &-4357676671377350722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1170782590717825142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 597c58932de20704d96681696d711ae9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Slime: {fileID: 0}
+  player: {fileID: 0}
+  floorLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  roaming: {x: 0, y: 0, z: 0}
+  RoamRange: 0
+  playerInSight: 0
+  needToFlee: 0
+  playerInRange: 0
+  fleeRange: 0
+  multiplyBy: 0

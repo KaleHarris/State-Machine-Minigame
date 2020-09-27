@@ -7,7 +7,6 @@ public class Slime : MonoBehaviour {
     public ObiSoftbody softBody;
     public SkinnedMeshRenderer meshRenderer;
     public MeshCollider collider;
-
     void LateUpdate () {
         Mesh colliderMesh = new Mesh ();
         meshRenderer.BakeMesh (colliderMesh);
