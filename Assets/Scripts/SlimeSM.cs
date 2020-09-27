@@ -13,8 +13,6 @@ public class SlimeSM : MonoBehaviour
     public LayerMask floorLayer, playerLayer;
 
     NavMeshHit hit;
-    
-    
 
     public Vector3 roaming;
     bool setToRoam;
@@ -40,13 +38,22 @@ public class SlimeSM : MonoBehaviour
         //fleeRange = Physics.CheckSphere(transform.position, needToFlee, playerLayer);
 
 
-        if (!playerInRange && !fleeRange) Roam();
+        if (!playerInRange && !fleeRange)
+        {
+            Roam();
+        }
 
         //when the player is in chase range but not in attack range run the Chase function
-        if (playerInRange && !fleeRange) Follow();
+        if (playerInRange && !fleeRange)
+        {
+            Follow();
+        }
 
         //when the player is in range and close enough to attack run the Attack function
-        //if (playerInRange && fleeRange) Flee();
+        if (playerInRange && fleeRange)
+        {
+            Follow();
+        }
     }
 
     private void Roam()

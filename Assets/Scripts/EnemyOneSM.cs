@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class EnemyOneSM : MonoBehaviour
 {
+
     //define agent for NavMeash
     public NavMeshAgent agentOne;
     //For finding player
@@ -24,6 +25,7 @@ public class EnemyOneSM : MonoBehaviour
     //States
     public float inSight, attackRange;
     public bool playerInRange, playerInAttackRange;
+
 
     private void Awake()
     {
@@ -81,8 +83,12 @@ public class EnemyOneSM : MonoBehaviour
     //Function for attacking the player
     private void Attack()
     {
+        float radius = 2.0f;
+        Vector3 movePos = player.transform.position;
+        movePos = Vector3.MoveTowards(movePos, transform.position, radius);
+
         //Debug.Log("I Am Attacking");
-        agentOne.SetDestination(player.position);
+        agentOne.SetDestination(movePos);
 
         transform.LookAt(player);
 
