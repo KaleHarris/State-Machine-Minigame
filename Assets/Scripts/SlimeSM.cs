@@ -59,7 +59,7 @@ public class SlimeSM : MonoBehaviour
     private void Roam()
     {
 
-        //Debug.Log("Slime is Roaming");
+        Debug.Log("Slime is Roaming");
 
         if (!setToRoam) RoamArea();
 
@@ -88,7 +88,7 @@ public class SlimeSM : MonoBehaviour
     private void Follow()
     {
         
-        Debug.Log("Slime is Following");
+        
 
         if (GameObject.Find("SlimeFood").GetComponent<SlimeFoodScript>().holdingFood)
         {
