@@ -36,7 +36,6 @@ public class SlimeSpawn : MonoBehaviour
         Instantiate(slimeGroup[UnityEngine.Random.Range(0, slimeGroup.Length - 1)], spawnPos, Quaternion.identity);
     }
 
-
     /*
     IEnumerator SlimeDrop()
     {

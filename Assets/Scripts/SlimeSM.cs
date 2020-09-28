@@ -110,24 +110,33 @@ public class SlimeSM : MonoBehaviour
             Slime.SetDestination(hit.position);
         }
     }
-    /*
-    private void Flee()
+
+    private void OnCollisionEnter(Collision SlimeCol)
     {
-       
-        Debug.Log("I Am Fleeing");
-        startTransform = transform;
 
-        transform.rotation = Quaternion.LookRotation(transform.position - player.position);
+        if (SlimeCol.gameObject.tag == "Sword")
+        {
+            Destroy(this.gameObject);
+        }
+    }
+        /*
+        private void Flee()
+        {
 
-        Vector3 runTo = transform.position + transform.forward * multiplyBy;
-       
-        NavMesh.SamplePosition(runTo, out hit, 5, 1 << NavMesh.GetAreaFromName("Walkable"));
+            Debug.Log("I Am Fleeing");
+            startTransform = transform;
 
-        transform.position = startTransform.position;
-        transform.rotation = startTransform.rotation;
+            transform.rotation = Quaternion.LookRotation(transform.position - player.position);
 
-        Slime.SetDestination(hit.position);
-        
-    }  
-    */
-}
+            Vector3 runTo = transform.position + transform.forward * multiplyBy;
+
+            NavMesh.SamplePosition(runTo, out hit, 5, 1 << NavMesh.GetAreaFromName("Walkable"));
+
+            transform.position = startTransform.position;
+            transform.rotation = startTransform.rotation;
+
+            Slime.SetDestination(hit.position);
+
+        }  
+        */
+    }
