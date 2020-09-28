@@ -117,6 +117,7 @@ public class SlimeSM : MonoBehaviour
         if (SlimeCol.gameObject.tag == "Sword")
         {
             Destroy(this.gameObject);
+            ScoreScript.scoreValue += 1;
         }
     }
         /*
