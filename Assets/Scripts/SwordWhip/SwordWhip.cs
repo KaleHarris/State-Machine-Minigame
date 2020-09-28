@@ -90,6 +90,21 @@ public class SwordWhip : MonoBehaviour {
         opencheck = open;
     }
 
+    bool b_ = true;
+    public void DeltaActive (bool b) {
+        if (b == b_) return;
+        b_ = b;
+        MeshRenderer[] mr = this.GetComponentsInChildren<MeshRenderer> ();
+        foreach (MeshRenderer r in mr)
+            r.enabled = b;
+        MeshCollider[] mc = this.GetComponentsInChildren<MeshCollider> ();
+        foreach (MeshCollider c in mc)
+            c.enabled = b;
+        BoxCollider[] bc = this.GetComponentsInChildren<BoxCollider> ();
+        foreach (BoxCollider a in bc)
+            a.enabled = b;
+    }
+
     public void Detach () {
         // set up children Array to reattach
         SwordWhipSegments[] _segments = this.gameObject.GetComponentsInChildren<SwordWhipSegments> ();
@@ -111,7 +126,7 @@ public class SwordWhip : MonoBehaviour {
 
     void Update () {
         this.gameObject.GetComponent<BoxCollider> ().isTrigger = open;
-        
+
         SwordWhipSegments[] swordSegments = this.gameObject.GetComponentsInChildren<SwordWhipSegments> ();
 
         // sets up animation phase

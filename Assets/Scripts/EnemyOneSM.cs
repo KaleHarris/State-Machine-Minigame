@@ -71,7 +71,7 @@ public class EnemyOneSM : MonoBehaviour
 
         Scanning = new Vector3(transform.position.x + RandomX, transform.position.y, transform.position.z + RandomZ);
 
-        if (Physics.Raycast(Scanning, -transform.up, 2f, platformLayer))
+        if (Physics.Raycast(Scanning, -transform.up, 200f, platformLayer))
             SetScan = true;
     }
     //Function for Chasing the player
