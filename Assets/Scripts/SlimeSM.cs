@@ -2,10 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Audio;
 
 
 public class SlimeSM : MonoBehaviour
 {
+    public AudioClip deathSound; 
+    public AudioSource audioSourceSlime; //Used for ambient slimey noise
+
     public NavMeshAgent Slime;
 
     public Transform player;
@@ -29,11 +33,16 @@ public class SlimeSM : MonoBehaviour
         player = GameObject.Find("VRRig").transform;
         Slime = GetComponent<NavMeshAgent>();
 
+        audioSourceSlime.Play(); //Adds slime noise and plays, loops, and sets random pitch for each slime to distinguish them
+        audioSourceSlime.loop = true;
+        audioSourceSlime.pitch = (Random.Range(0.5f, 1.2f));
     }
 
     // Update is called once per frame
     private void Update()
     {
+        //audioSourceSlime.pitch = (Random.Range(0.5f, 1.2f));
+
         playerInRange = Physics.CheckSphere(transform.position, playerInSight, playerLayer);
         //fleeRange = Physics.CheckSphere(transform.position, needToFlee, playerLayer);
 
@@ -118,6 +127,9 @@ public class SlimeSM : MonoBehaviour
         {
             Destroy(this.gameObject);
             ScoreScript.scoreValue += 1;
+
+            AudioSource.PlayClipAtPoint (deathSound, transform.position); //Plays the death sound at the slime's position when hit
+            audioSourceSlime.Stop();
         }
     }
         /*
