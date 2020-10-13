@@ -22,8 +22,8 @@ public class SlimeSM : MonoBehaviour
     bool setToRoam;
     public float RoamRange;
 
-    public float playerInSight, needToFlee;
-    public bool playerInRange, fleeRange;
+    public float playerInSight;
+    public bool playerInRange;
 
     private Transform startTransform;
     public float multiplyBy;
@@ -47,19 +47,13 @@ public class SlimeSM : MonoBehaviour
         //fleeRange = Physics.CheckSphere(transform.position, needToFlee, playerLayer);
 
 
-        if (!playerInRange && !fleeRange)
+        if (!playerInRange)
         {
             Roam();
         }
 
         //when the player is in chase range but not in attack range run the Chase function
-        if (playerInRange && !fleeRange)
-        {
-            Follow();
-        }
-
-        //when the player is in range and close enough to attack run the Attack function
-        if (playerInRange && fleeRange)
+        if (playerInRange)
         {
             Follow();
         }
@@ -95,15 +89,9 @@ public class SlimeSM : MonoBehaviour
     
 
     private void Follow()
-    {
-        
-        
+    {        
 
-        if (GameObject.Find("SlimeFood").GetComponent<SlimeFoodScript>().holdingFood)
-        {
-            Slime.SetDestination(player.position);
-        }
-        else
+        if (Vector3.Distance(GameObject.Find("VRRig").transform.position, Slime.transform.position) < 100)
         {
             startTransform = transform;
 
@@ -111,12 +99,16 @@ public class SlimeSM : MonoBehaviour
 
             Vector3 runTo = transform.position + transform.forward * multiplyBy;
 
-            NavMesh.SamplePosition(runTo, out hit, 5, 1 << NavMesh.GetAreaFromName("Walkable"));
+            NavMesh.SamplePosition(runTo, out hit, 20, 1 << NavMesh.GetAreaFromName("Walkable"));
 
             transform.position = startTransform.position;
             transform.rotation = startTransform.rotation;
 
-            Slime.SetDestination(hit.position);
+            Slime.SetDestination(hit.position);           
+        }
+        else
+        {
+            Slime.SetDestination(player.position);
         }
     }
 

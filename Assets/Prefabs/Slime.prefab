@@ -409,10 +409,8 @@ MonoBehaviour:
   roaming: {x: 0, y: 0, z: 0}
   RoamRange: 100
   playerInSight: 10
-  needToFlee: 10
   playerInRange: 0
-  fleeRange: 0
-  multiplyBy: 20.04
+  multiplyBy: 2
 --- !u!195 &7621292009733134262
 NavMeshAgent:
   m_ObjectHideFlags: 0
