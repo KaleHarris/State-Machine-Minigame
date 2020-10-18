@@ -3,20 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyOneSM : MonoBehaviour
-{
+public class EnemyOneSM : MonoBehaviour {
+    //For finding player
+    [HideInInspector] public EnemyManager manager;
 
     //define agent for NavMeash
     public NavMeshAgent agentOne;
-    //For finding player
-    public Transform player;
-    //create Layermasks
-    public LayerMask platformLayer, playerLayer;
 
     //Scan
-    public Vector3 Scanning;
-    bool SetScan;
     public float scanningRange;
+    public Transform origin;
 
     //Attack
     public float attackTimer;
@@ -24,85 +20,91 @@ public class EnemyOneSM : MonoBehaviour
 
     //States
     public float inSight, attackRange;
-    public bool playerInRange, playerInAttackRange;
 
-
-    private void Awake()
-    {
-        player = GameObject.Find("VRRig").transform;
-        agentOne = GetComponent<NavMeshAgent>();
+    private void Awake () {
+        agentOne = GetComponent<NavMeshAgent> ();
     }
-    
-    // Update is called once per frame
-    private void Update()
-    {
-        //check to see if player is in sight and in attack range
-        playerInRange = Physics.CheckSphere(transform.position, inSight, playerLayer);
-        playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, playerLayer);
 
-        //when the player is not in attack range or the chase range run the Scan function
-        if (!playerInRange && !playerInAttackRange) Scan();
-        //when the player is in chase range but not in attack range run the Chase function
-        if (playerInRange && !playerInAttackRange) Chase();
-        //when the player is in range and close enough to attack run the Attack function
-        if (playerInRange && playerInAttackRange) Attack();
+    private void Update () {
+        float closest = Mathf.Infinity;
+        Transform enemySelect = null;
+        RaycastHit hit;
+        foreach (Transform p in manager.enemies) {
+            float d = Vector3.Distance (transform.position, p.position);
+            if (d < inSight)
+                if (Physics.Raycast (transform.position, (p.position - transform.position), out hit, inSight))
+                    if (hit.transform == p)
+                        if (d < closest) {
+                            enemySelect = p;
+                            closest = d;
+                        }
+        }
 
+        if (!enemySelect) Scan ();
+        else {
+            if (closest <= attackRange) Attack (enemySelect);
+            else Chase (enemySelect);
+        }
+
+        /* Old itteration
+            //check to see if player is in sight and in attack range
+            playerInRange = Physics.CheckSphere (transform.position, inSight, playerLayer);
+            playerInAttackRange = Physics.CheckSphere (transform.position, attackRange, playerLayer);
+
+            //when the player is not in attack range or the chase range run the Scan function
+            if (!playerInRange && !playerInAttackRange) Scan ();
+            //when the player is in chase range but not in attack range run the Chase function
+            if (playerInRange && !playerInAttackRange) Chase ();
+            //when the player is in range and close enough to attack run the Attack function
+            if (playerInRange && playerInAttackRange) Attack ();
+        */
     }
+
     //Function for finding the player
-    private void Scan()
-    {
-        //Debug.Log("I Am Scanning");
+    private void Scan () {
+        if (agentOne.remainingDistance > 0.1f) return;
+        agentOne.SetDestination (NavMeshSpot ());
 
-        if (!SetScan) ScanningArea();
+        /* Old itteration
+            float RandomZ = Random.Range (-scanningRange, scanningRange);
+            float RandomX = Random.Range (-scanningRange, scanningRange);
 
-        if (SetScan)
-            agentOne.SetDestination(Scanning);
+            Scanning = new Vector3 (transform.position.x + RandomX, transform.position.y, transform.position.z + RandomZ);
 
-        Vector3 distanceToDestination = transform.position - Scanning;
-
-        if (distanceToDestination.magnitude < 1f)
-            SetScan = false;
+            if (Physics.Raycast (Scanning, -transform.up, 200f, platformLayer)) {
+                SetScan = true;
+                agentOne.SetDestination (Scanning);
+            }
+        */
     }
-    
-    private void ScanningArea()
-    {
-        float RandomZ = Random.Range(-scanningRange, scanningRange);
-        float RandomX = Random.Range(-scanningRange, scanningRange);
 
-        Scanning = new Vector3(transform.position.x + RandomX, transform.position.y, transform.position.z + RandomZ);
+    public Vector3 NavMeshSpot () {
+        Vector3 randomDirection = UnityEngine.Random.insideUnitSphere * scanningRange;
+        randomDirection += origin.position;
+        NavMeshHit navHit;
+        NavMesh.SamplePosition (randomDirection, out navHit, scanningRange, agentOne.areaMask);
+        return navHit.position;
+    }
 
-        if (Physics.Raycast(Scanning, -transform.up, 200f, platformLayer))
-            SetScan = true;
-    }
-    //Function for Chasing the player
-    private void Chase()
-    {
-        //Debug.Log("I Am Chasing");
-        agentOne.SetDestination(player.position);
-    }
     //Function for attacking the player
-    private void Attack()
-    {
+    private void Attack (Transform player) {
         float radius = 2.0f;
         Vector3 movePos = player.transform.position;
-        movePos = Vector3.MoveTowards(movePos, transform.position, radius);
+        movePos = Vector3.MoveTowards (movePos, transform.position, radius);
 
-        //Debug.Log("I Am Attacking");
-        agentOne.SetDestination(movePos);
+        agentOne.SetDestination (movePos);
 
-        transform.LookAt(player);
+        transform.LookAt (player);
 
-        if (!Attacked)
-        {
+        if (!Attacked) {
             // NEED TO ADD SOME FORM OF ATTACK HERE
 
             Attacked = true;
-            Invoke(nameof(ResetAttack), attackTimer);
+            Invoke (nameof (ResetAttack), attackTimer);
         }
     }
 
-    private void ResetAttack()
-    {
-        Attacked = false;
-    }
+    //Function for Chasing the player
+    private void Chase (Transform player) => agentOne.SetDestination (player.position);
+    private void ResetAttack () => Attacked = false;
 }
