@@ -52,11 +52,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _AlphaClip: 1
-    - _Blend: 2
+    - _Blend: 0
     - _BumpScale: 1
     - _Cull: 2
     - _Cutoff: 0
-    - _DstBlend: 1
+    - _DstBlend: 10
     - _EnvironmentReflections: 0
     - _GlossMapScale: 0
     - _Glossiness: 0
