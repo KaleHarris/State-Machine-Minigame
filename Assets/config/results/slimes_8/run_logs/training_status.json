@@ -1,0 +1,23 @@
+{
+    "slimes": {
+        "checkpoints": [
+            {
+                "steps": 27427,
+                "file_path": "results\\slimes_8\\slimes\\slimes-27427.nn",
+                "reward": -0.11764705882352941,
+                "creation_time": 1603052271.5456579
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 27427,
+            "file_path": "results\\slimes_8\\slimes.nn",
+            "reward": -0.11764705882352941,
+            "creation_time": 1603052271.5456579
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.1.0",
+        "mlagents_version": "0.20.0",
+        "tensorflow_version": "2.3.1"
+    }
+}

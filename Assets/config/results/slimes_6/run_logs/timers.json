@@ -1,0 +1,42 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1603051042",
+        "python_version": "3.8.5 (default, Sep  3 2020, 21:29:08) [MSC v.1916 64 bit (AMD64)]",
+        "command_line_arguments": "C:\\Users\\VFoS\\anaconda3\\envs\\ml-agents-0.1\\Scripts\\mlagents-learn ./trainer_config.yaml --run-id=slimes_6 --train",
+        "mlagents_version": "0.20.0",
+        "mlagents_envs_version": "0.20.0",
+        "communication_protocol_version": "1.1.0",
+        "tensorflow_version": "2.3.1",
+        "numpy_version": "1.19.2",
+        "end_time_seconds": "1603051119"
+    },
+    "total": 76.86272980000001,
+    "count": 1,
+    "self": 0.29015960000000973,
+    "children": {
+        "run_training.setup": {
+            "total": 0.009758600000000062,
+            "count": 1,
+            "self": 0.009758600000000062
+        },
+        "TrainerController.start_learning": {
+            "total": 76.5628116,
+            "count": 1,
+            "self": 0.00018940000001066437,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 76.5623033,
+                    "count": 1,
+                    "self": 76.5623033
+                },
+                "TrainerController._save_models": {
+                    "total": 0.0003188999999963471,
+                    "count": 1,
+                    "self": 0.0003188999999963471
+                }
+            }
+        }
+    }
+}

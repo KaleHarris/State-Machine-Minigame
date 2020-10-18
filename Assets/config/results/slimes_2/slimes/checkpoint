@@ -1,0 +1,2 @@
+model_checkpoint_path: "slimes-60396.ckpt"
+all_model_checkpoint_paths: "slimes-60396.ckpt"
