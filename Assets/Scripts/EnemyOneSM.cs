@@ -21,6 +21,10 @@ public class EnemyOneSM : MonoBehaviour {
     //States
     public float inSight, attackRange;
 
+    //Sound
+    public AudioSource hitSound;
+    private bool soundPlaying = false;
+
     private void Awake () {
         agentOne = GetComponent<NavMeshAgent> ();
     }
@@ -107,4 +111,17 @@ public class EnemyOneSM : MonoBehaviour {
     //Function for Chasing the player
     private void Chase (Transform player) => agentOne.SetDestination (player.position);
     private void ResetAttack () => Attacked = false;
+
+    void OnCollisionEnter(Collision spikeyCol)
+    {
+        if (soundPlaying == false && spikeyCol.gameObject.tag == "Sword")
+        {
+            hitSound.Play();
+            soundPlaying = true;
+        }
+        else
+        {
+            soundPlaying = false;
+        }
+    }
 }
