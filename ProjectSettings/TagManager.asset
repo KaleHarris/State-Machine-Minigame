@@ -7,6 +7,7 @@ TagManager:
   - Hands
   - Slime
   - Sword
+  - Enemy
   layers:
   - Default
   - TransparentFX
