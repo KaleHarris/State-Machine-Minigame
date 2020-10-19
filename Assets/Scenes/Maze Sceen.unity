@@ -27419,7 +27419,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a5311a43857368d4dbef02f4eed84f27, type: 2}
+  - {fileID: 2100000, guid: 0c2ad70b532b25b45bf9bb08c9dc2e90, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -27460,6 +27460,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6c6d17b645bf3d438cd2074cd07fb54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  degreesPerSecond: 15
+  amplitude: 0.5
+  frequency: 1
 --- !u!135 &1287906610201804529
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -27487,6 +27490,7 @@ GameObject:
   - component: {fileID: 1287906610201804529}
   - component: {fileID: 1287906610201804528}
   - component: {fileID: 1287906610201804532}
+  - component: {fileID: 1287906610201804533}
   m_Layer: 0
   m_Name: Orb (6)
   m_TagString: Untagged
@@ -27521,6 +27525,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 217caab06567d694dbb006ef6a74011b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1287906610201804533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1287906610201804530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6c6d17b645bf3d438cd2074cd07fb54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   degreesPerSecond: 15
@@ -27632,6 +27648,7 @@ GameObject:
   - component: {fileID: 1287906610326655679}
   - component: {fileID: 1287906610326655678}
   - component: {fileID: 1287906610326655650}
+  - component: {fileID: 1287906610326655651}
   m_Layer: 0
   m_Name: Orb (5)
   m_TagString: Untagged
@@ -27668,6 +27685,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 217caab06567d694dbb006ef6a74011b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1287906610326655651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1287906610326655648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6c6d17b645bf3d438cd2074cd07fb54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   degreesPerSecond: 15
   amplitude: 0.5
   frequency: 1
@@ -27689,7 +27718,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a5311a43857368d4dbef02f4eed84f27, type: 2}
+  - {fileID: 2100000, guid: 0c2ad70b532b25b45bf9bb08c9dc2e90, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -27730,6 +27759,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6c6d17b645bf3d438cd2074cd07fb54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  degreesPerSecond: 15
+  amplitude: 0.5
+  frequency: 1
 --- !u!135 &1287906610326655679
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -28039,6 +28071,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6c6d17b645bf3d438cd2074cd07fb54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  degreesPerSecond: 15
+  amplitude: 0.5
+  frequency: 1
 --- !u!135 &1287906610585552898
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -28070,7 +28105,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a5311a43857368d4dbef02f4eed84f27, type: 2}
+  - {fileID: 2100000, guid: 0c2ad70b532b25b45bf9bb08c9dc2e90, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -28105,6 +28140,7 @@ GameObject:
   - component: {fileID: 1287906610585552898}
   - component: {fileID: 1287906610585552897}
   - component: {fileID: 1287906610585552902}
+  - component: {fileID: 1287906610585552903}
   m_Layer: 0
   m_Name: Orb
   m_TagString: Untagged
@@ -28139,6 +28175,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 217caab06567d694dbb006ef6a74011b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1287906610585552903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1287906610585552900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6c6d17b645bf3d438cd2074cd07fb54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   degreesPerSecond: 15
@@ -32912,6 +32960,7 @@ GameObject:
   - component: {fileID: 1287906610650627567}
   - component: {fileID: 1287906610650627566}
   - component: {fileID: 1287906610650627538}
+  - component: {fileID: 1287906610650627539}
   m_Layer: 0
   m_Name: Orb (3)
   m_TagString: Untagged
@@ -32948,6 +32997,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 217caab06567d694dbb006ef6a74011b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1287906610650627539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1287906610650627536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6c6d17b645bf3d438cd2074cd07fb54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   degreesPerSecond: 15
   amplitude: 0.5
   frequency: 1
@@ -32969,7 +33030,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a5311a43857368d4dbef02f4eed84f27, type: 2}
+  - {fileID: 2100000, guid: 0c2ad70b532b25b45bf9bb08c9dc2e90, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33010,6 +33071,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6c6d17b645bf3d438cd2074cd07fb54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  degreesPerSecond: 15
+  amplitude: 0.5
+  frequency: 1
 --- !u!135 &1287906610650627567
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -33054,7 +33118,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a5311a43857368d4dbef02f4eed84f27, type: 2}
+  - {fileID: 2100000, guid: 0c2ad70b532b25b45bf9bb08c9dc2e90, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33104,6 +33168,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6c6d17b645bf3d438cd2074cd07fb54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  degreesPerSecond: 15
+  amplitude: 0.5
+  frequency: 1
 --- !u!1 &1287906610720969909
 GameObject:
   m_ObjectHideFlags: 0
@@ -33118,6 +33185,7 @@ GameObject:
   - component: {fileID: 1287906610720969904}
   - component: {fileID: 1287906610720969907}
   - component: {fileID: 1287906610720969910}
+  - component: {fileID: 1287906610720969911}
   m_Layer: 0
   m_Name: Orb (2)
   m_TagString: Untagged
@@ -33135,6 +33203,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 217caab06567d694dbb006ef6a74011b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1287906610720969911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1287906610720969909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6c6d17b645bf3d438cd2074cd07fb54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   degreesPerSecond: 15
@@ -33254,6 +33334,7 @@ GameObject:
   - component: {fileID: 1287906610743612191}
   - component: {fileID: 1287906610743612190}
   - component: {fileID: 1287906610743612162}
+  - component: {fileID: 1287906610743612163}
   m_Layer: 0
   m_Name: Orb (11)
   m_TagString: Untagged
@@ -33290,6 +33371,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 217caab06567d694dbb006ef6a74011b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1287906610743612163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1287906610743612160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6c6d17b645bf3d438cd2074cd07fb54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   degreesPerSecond: 15
   amplitude: 0.5
   frequency: 1
@@ -33311,7 +33404,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a5311a43857368d4dbef02f4eed84f27, type: 2}
+  - {fileID: 2100000, guid: 0c2ad70b532b25b45bf9bb08c9dc2e90, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33352,6 +33445,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6c6d17b645bf3d438cd2074cd07fb54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  degreesPerSecond: 15
+  amplitude: 0.5
+  frequency: 1
 --- !u!135 &1287906610743612191
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -53064,7 +53160,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a5311a43857368d4dbef02f4eed84f27, type: 2}
+  - {fileID: 2100000, guid: 0c2ad70b532b25b45bf9bb08c9dc2e90, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -53114,6 +53210,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6c6d17b645bf3d438cd2074cd07fb54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  degreesPerSecond: 15
+  amplitude: 0.5
+  frequency: 1
 --- !u!1 &1287906611305038487
 GameObject:
   m_ObjectHideFlags: 0
@@ -53128,6 +53227,7 @@ GameObject:
   - component: {fileID: 1287906611305038482}
   - component: {fileID: 1287906611305038485}
   - component: {fileID: 1287906611305038488}
+  - component: {fileID: 1287906611305038489}
   m_Layer: 0
   m_Name: Orb (9)
   m_TagString: Untagged
@@ -53145,6 +53245,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 217caab06567d694dbb006ef6a74011b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1287906611305038489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1287906611305038487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6c6d17b645bf3d438cd2074cd07fb54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   degreesPerSecond: 15
@@ -53348,6 +53460,7 @@ GameObject:
   - component: {fileID: 1287906611403694188}
   - component: {fileID: 1287906611403694191}
   - component: {fileID: 1287906611403694162}
+  - component: {fileID: 1287906611403694163}
   m_Layer: 0
   m_Name: Orb (1)
   m_TagString: Untagged
@@ -53365,6 +53478,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 217caab06567d694dbb006ef6a74011b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1287906611403694163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1287906611403694161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6c6d17b645bf3d438cd2074cd07fb54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   degreesPerSecond: 15
@@ -53409,7 +53534,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a5311a43857368d4dbef02f4eed84f27, type: 2}
+  - {fileID: 2100000, guid: 0c2ad70b532b25b45bf9bb08c9dc2e90, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -53459,6 +53584,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6c6d17b645bf3d438cd2074cd07fb54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  degreesPerSecond: 15
+  amplitude: 0.5
+  frequency: 1
 --- !u!23 &1287906611542889600
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -53477,7 +53605,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a5311a43857368d4dbef02f4eed84f27, type: 2}
+  - {fileID: 2100000, guid: 0c2ad70b532b25b45bf9bb08c9dc2e90, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -53518,6 +53646,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6c6d17b645bf3d438cd2074cd07fb54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  degreesPerSecond: 15
+  amplitude: 0.5
+  frequency: 1
 --- !u!135 &1287906611542889603
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -53545,6 +53676,7 @@ GameObject:
   - component: {fileID: 1287906611542889603}
   - component: {fileID: 1287906611542889602}
   - component: {fileID: 1287906611542889606}
+  - component: {fileID: 1287906611542889607}
   m_Layer: 0
   m_Name: Orb (7)
   m_TagString: Untagged
@@ -53579,6 +53711,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 217caab06567d694dbb006ef6a74011b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1287906611542889607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1287906611542889604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6c6d17b645bf3d438cd2074cd07fb54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   degreesPerSecond: 15
@@ -58745,7 +58889,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a5311a43857368d4dbef02f4eed84f27, type: 2}
+  - {fileID: 2100000, guid: 0c2ad70b532b25b45bf9bb08c9dc2e90, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -58795,6 +58939,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6c6d17b645bf3d438cd2074cd07fb54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  degreesPerSecond: 15
+  amplitude: 0.5
+  frequency: 1
 --- !u!1 &1287906611863026155
 GameObject:
   m_ObjectHideFlags: 0
@@ -58809,6 +58956,7 @@ GameObject:
   - component: {fileID: 1287906611863026150}
   - component: {fileID: 1287906611863026153}
   - component: {fileID: 1287906611863026156}
+  - component: {fileID: 1287906611863026157}
   m_Layer: 0
   m_Name: Orb (10)
   m_TagString: Untagged
@@ -58826,6 +58974,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 217caab06567d694dbb006ef6a74011b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1287906611863026157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1287906611863026155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6c6d17b645bf3d438cd2074cd07fb54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   degreesPerSecond: 15
@@ -63695,7 +63855,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a5311a43857368d4dbef02f4eed84f27, type: 2}
+  - {fileID: 2100000, guid: 0c2ad70b532b25b45bf9bb08c9dc2e90, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -63736,6 +63896,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6c6d17b645bf3d438cd2074cd07fb54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  degreesPerSecond: 15
+  amplitude: 0.5
+  frequency: 1
 --- !u!135 &1287906611937209175
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -63763,6 +63926,7 @@ GameObject:
   - component: {fileID: 1287906611937209175}
   - component: {fileID: 1287906611937209174}
   - component: {fileID: 1287906611937209178}
+  - component: {fileID: 1287906611937209179}
   m_Layer: 0
   m_Name: Orb (4)
   m_TagString: Untagged
@@ -63797,6 +63961,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 217caab06567d694dbb006ef6a74011b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1287906611937209179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1287906611937209176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6c6d17b645bf3d438cd2074cd07fb54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   degreesPerSecond: 15
@@ -68769,6 +68945,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6c6d17b645bf3d438cd2074cd07fb54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  degreesPerSecond: 15
+  amplitude: 0.5
+  frequency: 1
 --- !u!1 &1287906612122341971
 GameObject:
   m_ObjectHideFlags: 0
@@ -68783,6 +68962,7 @@ GameObject:
   - component: {fileID: 1287906612122341998}
   - component: {fileID: 1287906612122341969}
   - component: {fileID: 1287906612122341972}
+  - component: {fileID: 1287906612122341973}
   m_Layer: 0
   m_Name: Orb (8)
   m_TagString: Untagged
@@ -68800,6 +68980,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 217caab06567d694dbb006ef6a74011b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1287906612122341973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1287906612122341971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6c6d17b645bf3d438cd2074cd07fb54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   degreesPerSecond: 15
@@ -68844,7 +69036,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a5311a43857368d4dbef02f4eed84f27, type: 2}
+  - {fileID: 2100000, guid: 0c2ad70b532b25b45bf9bb08c9dc2e90, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
