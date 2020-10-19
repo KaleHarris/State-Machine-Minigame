@@ -30,6 +30,7 @@ public class SlimeSM : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         player = GameObject.Find("VRRig").transform;
         Slime = GetComponent<NavMeshAgent>();
 
@@ -58,7 +59,6 @@ public class SlimeSM : MonoBehaviour
             Follow();
         }
     }
-
     private void Roam()
     {
 
@@ -112,36 +112,40 @@ public class SlimeSM : MonoBehaviour
         }
     }
 
+    
+
     private void OnCollisionEnter(Collision SlimeCol)
     {
 
         if (SlimeCol.gameObject.tag == "Sword")
         {
             Destroy(this.gameObject);
-            ScoreScript.scoreValue += 1;
 
             AudioSource.PlayClipAtPoint (deathSound, transform.position); //Plays the death sound at the slime's position when hit
             audioSourceSlime.Stop();
+
         }
     }
-        /*
-        private void Flee()
-        {
 
-            Debug.Log("I Am Fleeing");
-            startTransform = transform;
+    
+    /*
+    private void Flee()
+    {
 
-            transform.rotation = Quaternion.LookRotation(transform.position - player.position);
+        Debug.Log("I Am Fleeing");
+        startTransform = transform;
 
-            Vector3 runTo = transform.position + transform.forward * multiplyBy;
+        transform.rotation = Quaternion.LookRotation(transform.position - player.position);
 
-            NavMesh.SamplePosition(runTo, out hit, 5, 1 << NavMesh.GetAreaFromName("Walkable"));
+        Vector3 runTo = transform.position + transform.forward * multiplyBy;
 
-            transform.position = startTransform.position;
-            transform.rotation = startTransform.rotation;
+        NavMesh.SamplePosition(runTo, out hit, 5, 1 << NavMesh.GetAreaFromName("Walkable"));
 
-            Slime.SetDestination(hit.position);
+        transform.position = startTransform.position;
+        transform.rotation = startTransform.rotation;
 
-        }  
-        */
-    }
+        Slime.SetDestination(hit.position);
+
+    }  
+    */
+}
