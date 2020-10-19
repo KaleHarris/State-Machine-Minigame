@@ -508,7 +508,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartFuel: 0
   currentFuel: 0
-  fuelBar: {fileID: 759127983}
+  fuelBar: {fileID: 518381578}
 --- !u!1 &62496940
 GameObject:
   m_ObjectHideFlags: 0
@@ -3489,6 +3489,18 @@ MonoBehaviour:
   thickness: 0
   m_SourceCollider: {fileID: 500968346}
   m_DistanceField: {fileID: 0}
+--- !u!114 &518381578 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2907256608137234008, guid: f77e4b3b083e9764ab142a5a8c814dd1,
+    type: 3}
+  m_PrefabInstance: {fileID: 2907256608756210167}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9819592c85363d64888f21696605a583, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &527076892
 GameObject:
   m_ObjectHideFlags: 0
@@ -3753,12 +3765,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 527855955}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.655121, y: -46.2519, z: 91.6792}
+  m_LocalPosition: {x: 143.73332, y: 13.333332, z: 100}
   m_LocalScale: {x: 13.333333, y: 13.333333, z: 13.333333}
   m_Children:
   - {fileID: 1317958738}
   m_Father: {fileID: 1764942754}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &527855960
 MonoBehaviour:
@@ -3775,7 +3787,7 @@ MonoBehaviour:
   manager: {fileID: 0}
   agentOne: {fileID: 527855961}
   scanningRange: 166.5
-  origin: {fileID: 0}
+  origin: {fileID: 1764942754}
   attackTimer: 1
   inSight: 40
   attackRange: 5
@@ -5757,7 +5769,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 290606392}
   m_Father: {fileID: 1812758373}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9836,12 +9849,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1690757133}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -210.74487, y: -46.2519, z: -73.65414}
+  m_LocalPosition: {x: -78.66667, y: 13.333332, z: -65.333336}
   m_LocalScale: {x: 13.333333, y: 13.333333, z: 13.333333}
   m_Children:
   - {fileID: 1619379217}
   m_Father: {fileID: 1764942754}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1690757135
 MonoBehaviour:
@@ -9858,7 +9871,7 @@ MonoBehaviour:
   manager: {fileID: 0}
   agentOne: {fileID: 1690757136}
   scanningRange: 166.5
-  origin: {fileID: 0}
+  origin: {fileID: 1764942754}
   attackTimer: 1
   inSight: 40
   attackRange: 5
@@ -10176,11 +10189,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1764942752}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 132.0782, y: 59.58523, z: 8.320798}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 527855959}
   - {fileID: 1690757134}
+  - {fileID: 527855959}
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11506,7 +11519,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartFuel: 0
   currentFuel: 0
-  fuelBar: {fileID: 759127983}
+  fuelBar: {fileID: 518381578}
 --- !u!1 &1945477832
 GameObject:
   m_ObjectHideFlags: 0
@@ -12739,7 +12752,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartFuel: 0
   currentFuel: 0
-  fuelBar: {fileID: 759127983}
+  fuelBar: {fileID: 518381578}
 --- !u!1001 &2907256608756210167
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14098,7 +14111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartFuel: 0
   currentFuel: 0
-  fuelBar: {fileID: 759127983}
+  fuelBar: {fileID: 518381578}
 --- !u!153 &3261952275274934288
 ConfigurableJoint:
   m_ObjectHideFlags: 0
